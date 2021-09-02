@@ -36,8 +36,7 @@ public class UserController
     }
 
     @GetMapping( "/{id}" )
-    public ResponseEntity<User> findById( @PathVariable String id )
-    {
+    public ResponseEntity<User> findById( @PathVariable String id ) throws Exception {
         return ResponseEntity.ok( userService.findById( id ) );
     }
 
